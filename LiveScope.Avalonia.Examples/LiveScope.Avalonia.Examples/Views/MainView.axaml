@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:LiveScope.Avalonia.Examples.ViewModels"
+             xmlns:avalonia="clr-namespace:LiveScope.Avalonia;assembly=LiveScope.Avalonia"
+             xmlns:net="clr-namespace:LiveScope.Net;assembly=LiveScope.Net"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1050"
+             x:Class="LiveScope.Avalonia.Examples.Views.MainView"
+             x:DataType="vm:MainViewModel" Background="Black">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <avalonia:LiveScopeControl Name="chartMainA" Grid.Row="0" Grid.Column="0"
+                                Margin="10" SeriesLayout="Stacked"
+                                BackgroundColor="Black"
+                                XAxisColor="LightGreen" YAxisColor="LightGreen"
+                                YMin="-1.0" YMax="1.0" XMin="0.0" XMax="2.0"
+                                UpdateData="Append">
+        </avalonia:LiveScopeControl>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label>X Min</Label>
+            <TextBox Text="{Binding #chartMainA.XMin, Mode=TwoWay}" Margin="10,0,10,0"/>
+            <Label>X Max</Label>
+            <TextBox Text="{Binding #chartMainA.XMax, Mode=TwoWay}" Margin="10,0,10,0"/>
+            <Label>Y Min</Label>
+            <TextBox Text="{Binding #chartMainA.YMin, Mode=TwoWay}" Margin="10,0,10,0"/>
+            <Label>Y Max</Label>
+            <TextBox Text="{Binding #chartMainA.YMax, Mode=TwoWay}" Margin="10,0,10,0"/>
+            <Label Content="{Binding #chartMainA.CursorValue, Mode=TwoWay}" Foreground="Blue" Background="Black"></Label>
+            <Button Name="btnGenerate" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Click="btnGenerate_OnClick"
+                    Background="LightGray" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Generate</Button>
+            <Button Name="btnPico" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Click="btnPico_OnClick"
+                    Background="LightGray" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Pico</Button>
+            <Button Name="btnStartRecordingLong" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Click="BtnStartRecording_OnClick"
+                    Background="LightGray" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Acquire</Button>
+            <Button Name="btnAutoscale" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Background="LightGray"
+                    Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnAutoscale_OnClick">Scale</Button>
+            <Button Name="btnPause" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Background="LightGray"
+                    Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnPause_OnClick">Pause</Button>
+            <Button Name="btnResume" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Background="LightGray"
+                    Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnResume_OnClick">Resume</Button>
+            <Button Name="btnRemove" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Background="LightGray"
+                    Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnRemove_OnClick">Remove</Button>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
