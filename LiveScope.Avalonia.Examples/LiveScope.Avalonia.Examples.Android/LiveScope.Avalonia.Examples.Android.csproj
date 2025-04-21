@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>33</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ApplicationId>com.CompanyName.LiveScope.Avalonia.Examples</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia.Android" Version="11.0.6" />
-    <PackageReference Include="LiveScope.Avalonia.Android" Version="0.4.4-alpha5" />
+    <PackageReference Include="Avalonia.Android" Version="11.2.6" />
+    <PackageReference Include="LiveScope.Avalonia.Android" Version="0.5.332" />
     <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.1" />
   </ItemGroup>
 
