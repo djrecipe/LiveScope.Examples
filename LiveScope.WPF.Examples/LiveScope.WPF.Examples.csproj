@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LiveScope.WPF" Version="0.5.332" />
+    <PackageReference Include="LiveScope.WPF" Version="0.5.335-beta" />
   </ItemGroup>
 
 </Project>

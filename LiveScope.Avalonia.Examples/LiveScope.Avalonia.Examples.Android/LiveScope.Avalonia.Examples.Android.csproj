@@ -10,6 +10,11 @@
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <PublishTrimmed>False</PublishTrimmed>
+    <DebugSymbols>True</DebugSymbols>
+  </PropertyGroup>
 
   <ItemGroup>
     <AndroidResource Include="Icon.png">
@@ -19,11 +24,11 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Android" Version="11.2.6" />
-    <PackageReference Include="LiveScope.Avalonia.Android" Version="0.5.332" />
+    <PackageReference Include="LiveScope.Avalonia.Android" Version="0.5.335-beta" />
     <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LiveScope.Avalonia.Examples\LiveScope.Avalonia.Examples.csproj"/>
+    <ProjectReference Include="..\LiveScope.Avalonia.Examples\LiveScope.Avalonia.Examples.csproj" />
   </ItemGroup>
 </Project>

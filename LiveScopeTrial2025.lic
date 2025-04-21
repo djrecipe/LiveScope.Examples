@@ -1,0 +1,13 @@
+﻿<License>
+  <Id>7085af80-d939-4853-90a2-d6f0a6d3b2b3</Id>
+  <Type>Standard</Type>
+  <Expiration>Tue, 21 Apr 2026 14:25:38 GMT</Expiration>
+  <ProductFeatures>
+    <Feature name="Alpha Build">yes</Feature>
+  </ProductFeatures>
+  <Customer>
+    <Name>Justin</Name>
+    <Email>brkfstmnchr@gmail.com</Email>
+  </Customer>
+  <Signature>MEUCID66qiAHz/VA1xUZPku0kYH1RcpkQjAcAVnkD/3WT3TZAiEArTY7xcSmb31Ep0g9qtJunwhlu+hsB5zUJkdwZiNvltw=</Signature>
+</License>

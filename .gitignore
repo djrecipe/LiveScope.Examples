@@ -49,3 +49,4 @@ bld/
 *.exe
 *.out
 *.app
+*.user

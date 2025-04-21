@@ -1,9 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.ReactiveUI;
 using System;
-using LiveScope.Avalonia.Windows;
-using LiveScope.Windows;
-using LiveScope.Net;
 
 namespace LiveScope.Avalonia.Examples.Desktop
 {
@@ -19,7 +16,7 @@ namespace LiveScope.Avalonia.Examples.Desktop
         // Avalonia configuration, don't remove; also used by visual designer.
         public static AppBuilder BuildAvaloniaApp()
         {
-            LiveScope.Net.Licensing.LicenseKey = "PExpY2Vuc2U+DQogIDxJZD40ZWVhMDU2Ni04YjE5LTRlZjktOGJjYS00MjY5NWZjODc4YWE8L0lkPg0KICA8VHlwZT5UcmlhbDwvVHlwZT4NCiAgPEV4cGlyYXRpb24+VHVlLCAzMSBEZWMgMjAyNCAxNzowMDowMCBHTVQ8L0V4cGlyYXRpb24+DQogIDxDdXN0b21lcj4NCiAgICA8TmFtZT5KdXN0aW48L05hbWU+DQogICAgPEVtYWlsPmp1c3RpbkBsaXZlc2NvcGUubmV0PC9FbWFpbD4NCiAgPC9DdXN0b21lcj4NCiAgPFNpZ25hdHVyZT5NRVVDSUNxTWdDbkMrRWc5Vmh5YnE3L0NUQmVqNDRBRjdWNnpuSEliemsrN1BLWVhBaUVBeUhwdE0wcWd1TUFCd1R5b2ozVWwvdXh6OS82aFZUOURLb3N2blVLaUVTWT08L1NpZ25hdHVyZT4NCjwvTGljZW5zZT4=";
+            LiveScope.Net.Licensing.LicenseKey = "PExpY2Vuc2U+DQogIDxJZD45MTJkNzVjZC1hODg1LTQyNWMtOTI2NC1hMjFmOWQ2ZTNjZDE8L0lkPg0KICA8VHlwZT5UcmlhbDwvVHlwZT4NCiAgPEV4cGlyYXRpb24+U2F0LCAxMyBTZXAgMjAyNSAwMTo1NjoyNyBHTVQ8L0V4cGlyYXRpb24+DQogIDxQcm9kdWN0RmVhdHVyZXM+DQogICAgPEZlYXR1cmUgbmFtZT0iQWxwaGEgQnVpbGQiPnllczwvRmVhdHVyZT4NCiAgPC9Qcm9kdWN0RmVhdHVyZXM+DQogIDxDdXN0b21lcj4NCiAgICA8TmFtZT5KdXN0aW48L05hbWU+DQogICAgPEVtYWlsPmp1c3RpbkBsaXZlc2NvcGUubmV0PC9FbWFpbD4NCiAgPC9DdXN0b21lcj4NCiAgPFNpZ25hdHVyZT5NRVVDSVFDWFpiMEh5RzFDTkJkc2FjQjJJWXNQWk1vd1l6czlMQXlwdHJOcC9JUzZzZ0lnQmowSncvZHhSSXR5cGgzOTZHa1lFWjRwelgwL0c3djIwSXVPV3dPRFBiaz08L1NpZ25hdHVyZT4NCjwvTGljZW5zZT4=";
             var app = AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .WithInterFont()
