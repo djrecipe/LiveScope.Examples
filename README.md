@@ -1,7 +1,9 @@
 # Welcome to LiveScope for .NET!
 [http://livescope.net/](http://livescope.net/)
 
-If you want to display real-time data in your proprietary cross-platform .NET application, you're in the right place. This library is much simpler and MUCH cheaper than alternatives such as SciChart or TeeChart, and is aimed specifically at displaying real-time stream data from proprietary ADC hardware. See section below to obtain a free trial key.
+If you want to display real-time data in your proprietary cross-platform .NET application, you're in the right place. This library is a simpler and cheaper alternative to such (wonderful and well-produced) options like SciChart or TeeChart.
+
+Livescope is aimed specifically at displaying real-time stream data from proprietary ADC hardware. We are still in very early stages of development, so this repo allows FREE usage via a 1-year trial key.
 
 ## Choosing the Right Package
 Consult this table to determine which NuGet package is right for you.
