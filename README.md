@@ -1,5 +1,5 @@
 # Welcome to LiveScope for .NET!
-[http://livescope.net/](http://livescope.net/) (still getting SSL sorted)
+[http://livescope.net/](http://livescope.net/)
 
 If you want to display real-time data in your proprietary cross-platform .NET application, you're in the right place. This library is much simpler and MUCH cheaper than alternatives such as SciChart or TeeChart, and is aimed specifically at displaying real-time stream data from proprietary ADC hardware. See section below to obtain a free trial key.
 
@@ -23,7 +23,14 @@ Contains examples for using LiveScope in a cross-platform Avalonia App on Window
 Contains examples for using LiveScope in a WPF app on Windows.
 
 ## Trial Key
-Use the license file "LiveScopeTrial2024.lic" contained within this repo:
+_What's the deal with these license keys anyway?_
+
+I want people to use LiveScope in its early development stages. This is why I have decided to continually update this repository to include a FREE license key, good for one year of free updates.
+
+As LiveScope approaches commercial viability, I will eventually reduce trial license periods to one month and shift to a more serious monetization strategy via perpetual license keys. By this point, I'm confident that LiveScope will be well worth every penny.
+
+### How to Use the FREE License
+Use the license file "LiveScopeTrial2025.lic" contained within this repo:
 ```
 LiveScope.Net.Licensing.LoadFromFile("LiveScopeTrial2025.lic");
 ```
