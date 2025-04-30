@@ -5,6 +5,8 @@ If you want to display real-time data in your proprietary cross-platform .NET ap
 
 Livescope is aimed specifically at displaying real-time stream data from proprietary ADC hardware. We are still in very early stages of development, so this repo allows FREE usage via a 1-year trial key.
 
+[Click here for full API reference](https://djrecipe.github.io/livescope.docs.io/).
+
 ## Choosing the Right Package
 Consult this table to determine which NuGet package is right for you.
 
