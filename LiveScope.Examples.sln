@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiveScope.Avalonia.Examples
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiveScope.Avalonia.Examples.Desktop", "LiveScope.Avalonia.Examples\LiveScope.Avalonia.Examples.Desktop\LiveScope.Avalonia.Examples.Desktop.csproj", "{3BBFFB17-A5AD-4C20-AA78-205F53FF9646}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveScope.Intergration.Examples", "LiveScope.Intergration.Examples\LiveScope.Intergration.Examples.csproj", "{998F9556-D3DA-4C54-A192-DD38CAD3A4DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{3BBFFB17-A5AD-4C20-AA78-205F53FF9646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BBFFB17-A5AD-4C20-AA78-205F53FF9646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BBFFB17-A5AD-4C20-AA78-205F53FF9646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998F9556-D3DA-4C54-A192-DD38CAD3A4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998F9556-D3DA-4C54-A192-DD38CAD3A4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998F9556-D3DA-4C54-A192-DD38CAD3A4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998F9556-D3DA-4C54-A192-DD38CAD3A4DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
