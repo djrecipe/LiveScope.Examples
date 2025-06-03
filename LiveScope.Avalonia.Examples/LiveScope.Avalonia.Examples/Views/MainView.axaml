@@ -41,8 +41,6 @@
             <Label Content="{Binding #chartMainA.CursorValue, Mode=TwoWay}" Foreground="Blue" Background="Black"></Label>
             <Button Name="btnGenerate" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Click="btnGenerate_OnClick"
                     Background="LightGray" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Generate</Button>
-            <Button Name="btnPico" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Click="btnPico_OnClick"
-                    Background="LightGray" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Pico</Button>
             <Button Name="btnStartRecordingLong" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Click="BtnStartRecording_OnClick"
                     Background="LightGray" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Acquire</Button>
             <Button Name="btnAutoscale" HorizontalAlignment="Left" Margin="10" Width="80" Height="35" Background="LightGray"
