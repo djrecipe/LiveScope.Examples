@@ -13,7 +13,7 @@ namespace LiveScope.WPF.Examples
     internal class MainWindowModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private string[] _AcquisitionItems = { "Audio (Short)", "Audio (Long)", "Picoscope", "Generative", "CSV" };
+        private string[] _AcquisitionItems = { "Audio (Short)", "Audio (Long)", "Generative", "CSV", "LiveScope" };
         public string[] AcquisitionItems
         {
             get
@@ -26,6 +26,52 @@ namespace LiveScope.WPF.Examples
                 this.OnPropertyChanged();
             }
         }
+
+        public bool IsAppendSamplesEnabled
+        {
+            get
+            {
+                return this.Chart.UpdateData == DataUpdateTypes.Append;
+            }
+            set
+            {
+                if (value)
+                    this.Chart.UpdateData = DataUpdateTypes.Append;
+                else
+                    this.Chart.UpdateData = DataUpdateTypes.Replace;
+                this.OnPropertyChanged();
+            }
+        }
+
+        public bool IsAutoscaleEnabled
+        {
+            get
+            {
+                return this.Chart.IsAutoscaleEnabled();
+            }
+            set
+            {
+                this.Chart.EnableAutoscale(value: value);
+                this.OnPropertyChanged();
+            }
+        }
+
+        internal LiveScopeControl Chart { get; set; }
+
+        private bool _IsFileStreamingEnabled = false;
+        public bool IsFileStreamingEnabled
+        {
+            get
+            {
+                return _IsFileStreamingEnabled;
+            }
+            set
+            {
+                this._IsFileStreamingEnabled = value;
+                this.OnPropertyChanged();
+            }
+        }
+
         public MainWindowModel()
         {
             LiveScope.Net.Licensing.LicenseKey = "PExpY2Vuc2U+DQogIDxJZD45MTJkNzVjZC1hODg1LTQyNWMtOTI2NC1hMjFmOWQ2ZTNjZDE8L0lkPg0KICA8VHlwZT5UcmlhbDwvVHlwZT4NCiAgPEV4cGlyYXRpb24+U2F0LCAxMyBTZXAgMjAyNSAwMTo1NjoyNyBHTVQ8L0V4cGlyYXRpb24+DQogIDxQcm9kdWN0RmVhdHVyZXM+DQogICAgPEZlYXR1cmUgbmFtZT0iQWxwaGEgQnVpbGQiPnllczwvRmVhdHVyZT4NCiAgPC9Qcm9kdWN0RmVhdHVyZXM+DQogIDxDdXN0b21lcj4NCiAgICA8TmFtZT5KdXN0aW48L05hbWU+DQogICAgPEVtYWlsPmp1c3RpbkBsaXZlc2NvcGUubmV0PC9FbWFpbD4NCiAgPC9DdXN0b21lcj4NCiAgPFNpZ25hdHVyZT5NRVVDSVFDWFpiMEh5RzFDTkJkc2FjQjJJWXNQWk1vd1l6czlMQXlwdHJOcC9JUzZzZ0lnQmowSncvZHhSSXR5cGgzOTZHa1lFWjRwelgwL0c3djIwSXVPV3dPRFBiaz08L1NpZ25hdHVyZT4NCjwvTGljZW5zZT4=";

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="LiveScope.Common" Version="0.5.335-beta" />
+        <PackageReference Include="LiveScope.Common" Version="0.5.501-beta" />
     </ItemGroup>
 
 </Project>

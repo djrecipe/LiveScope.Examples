@@ -4,10 +4,12 @@
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LiveScope.WPF" Version="0.5.335-beta" />
+    <PackageReference Include="LiveScope.WPF" Version="0.5.501-beta" />
+    <PackageReference Include="ToggleSwitch" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

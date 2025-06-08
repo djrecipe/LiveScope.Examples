@@ -2,7 +2,9 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using LiveScope.Net;
 using LiveScope.Net.DataCapture;
+using LiveScope.Net.DataCapture.DataSinks;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace LiveScope.Avalonia.Examples.Views
 {
@@ -10,6 +12,7 @@ namespace LiveScope.Avalonia.Examples.Views
     {
         private readonly Dictionary<uint, bool> autoscale = new();
         private IHardwareDataCapture hardwareDataCapture = null;
+        private FileDataSink sink = null;
         public MainView()
         {
             InitializeComponent();
@@ -23,7 +26,9 @@ namespace LiveScope.Avalonia.Examples.Views
              ...previous frame data is appended to current frame, resulting in a pseudo-scrolling frame
              ...eventually displays {buffer_size} number of samples
              */
-            this.chartMainA.AddSeries(AudioDataCaptureFactory.Create(44100, 2.0, SweepMode: SweepModes.Single));
+            var capture = AudioDataCaptureFactory.Create(44100, 2.0, SweepMode: SweepModes.Single);
+            //this.sink = new FileDataSink(capture, this.chartMainA.ViewArea, "test.livescope");
+            this.chartMainA.AddSeries(capture);
             this.chartMainA.TimeLength = 2;
             this.chartMainA.YMin = 0;
             this.chartMainA.YMax = 255;
@@ -31,20 +36,13 @@ namespace LiveScope.Avalonia.Examples.Views
 
         private void btnGenerate_OnClick(object? sender, RoutedEventArgs e)
         {
-            this.chartMainA.AddSeries(new GenerativeDataCapture(1.0, 0.0, 1000.0,
-                .0001, 5.0));
+            var capture = new GenerativeDataCapture(1.0, 0.0, 1000.0,
+                .0001, 5.0);
+            //this.sink = new FileDataSink(capture, this.chartMainA.ViewArea, "test.livescope");
+            this.chartMainA.AddSeries(capture);
             this.chartMainA.TimeLength = 2;
             this.chartMainA.YMin = 0;
             this.chartMainA.YMax = 1000;
-        }
-        private void btnPico_OnClick(object? sender, RoutedEventArgs e)
-        {
-            if (hardwareDataCapture is null)
-                hardwareDataCapture = HardwareDataCaptureFactory.Create(10.0, 2.0, 0.00001, 1.0);
-            this.chartMainA.AddSeries(hardwareDataCapture, new SeriesColor(230, 10, 74, 255));
-            this.chartMainA.TimeLength = 1;
-            this.chartMainA.YMin = -2;
-            this.chartMainA.YMax = 2;
         }
 
         private void BtnAutoscale_OnClick(object? sender, RoutedEventArgs e)

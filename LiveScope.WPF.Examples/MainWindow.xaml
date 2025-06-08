@@ -6,6 +6,7 @@
         xmlns:wpf="clr-namespace:LiveScope.WPF;assembly=LiveScope.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="MainWindow_OnLoaded">
+
     <Grid Background="DimGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -43,7 +44,14 @@
                       SelectedIndex="{Binding ElementName=chartMainA, Path=ActiveSeriesIndex, UpdateSourceTrigger=PropertyChanged, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True}"
                       SelectedItem="{Binding ElementName=chartMainA, Path=ActiveSeries, UpdateSourceTrigger=PropertyChanged, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True}"></ListView>
             <StackPanel Orientation="Vertical">
-                <Button x:Name="btnAutoscale" Margin="5" Width="80" Height="25" Click="btnAutoscale_Click">Autoscale</Button>
+                <!--<Button x:Name="btnAutoscale" Margin="5" Width="80" Height="25" Click="btnAutoscale_Click">Autoscale</Button>-->
+                <Button x:Name="btnLockCursor" Margin="5" Width="80" Height="25" Click="btnLockCursor_Click">Lock Cursor</Button>
+                <Button x:Name="btnSaveData" Margin="5" Width="80" Height="25" Click="BtnSaveData_OnClick">SaveData</Button>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <ToggleButton x:Name="btnUpdateData" Margin="5" Width="80" Height="25" IsChecked="{Binding IsAppendSamplesEnabled, Mode=TwoWay}">Append</ToggleButton>
+                <ToggleButton x:Name="btnAutoscale" Margin="5" Width="80" Height="25" IsChecked="{Binding IsAutoscaleEnabled, Mode=TwoWay}">Autoscale</ToggleButton>
+                <ToggleButton x:Name="btnFileStream" Margin="5" Width="80" Height="25" IsChecked="{Binding IsFileStreamingEnabled, Mode=TwoWay}">Save to Disk</ToggleButton>
             </StackPanel>
         </StackPanel>
 

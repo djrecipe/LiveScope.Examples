@@ -17,6 +17,6 @@
     <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.6" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.2.6" />
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.2.6" />
-    <PackageReference Include="LiveScope.Avalonia.Common" Version="0.5.335-beta" />
+    <PackageReference Include="LiveScope.Avalonia.Common" Version="0.5.501-beta" />
   </ItemGroup>
 </Project>

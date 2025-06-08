@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Android" Version="11.2.6" />
-    <PackageReference Include="LiveScope.Avalonia.Android" Version="0.5.335-beta" />
+    <PackageReference Include="LiveScope.Avalonia.Android" Version="0.5.501-beta" />
     <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.1" />
   </ItemGroup>
 
